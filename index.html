@@ -1,24 +1,26 @@
-<script>
+
   
-    function addImage(e) {
-      const miloImg = document.createElement('img');
-      miloImg.src = './assets/milo.png';
-      miloImg.style.width = '100px';
-      miloImg.style.position = 'absolute';
-      miloImg.style.left = e.clientX - 50 + 'px';
-      miloImg.style.top = e.clientY - 50 + 'px';
-      miloImg.style.animation = 'tiltHead 2.5s ease infinite';
-      miloImg.style.zIndex = '0';
-      console.log(e.clientX + ', ' + e.clientY);
-      const box = document.getElementById('mainDiv');
-      box.appendChild(miloImg);
-    }
-  </script>
-  
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div
+ <head>
+    <script>
+        function addImage() {
+            console.log("addImage");
+          const miloImg = document.createElement('img');
+          miloImg.src = './assets/milo.png';
+          miloImg.style.width = '100px';
+          miloImg.style.position = 'absolute';
+          miloImg.style.left = event.clientX - 50 + 'px';
+          miloImg.style.top = event.clientY - 50 + 'px';
+          miloImg.style.animation = 'tiltHead 2.5s ease infinite';
+          miloImg.style.zIndex = '0';
+          console.log(event.clientX + ', ' + event.clientY);
+          const box = document.getElementById('mainDiv');
+          box.appendChild(miloImg);
+        }
+      </script>
+ </head>
+ <div
     id="mainDiv"
-    on:click="addImage(e)"
+    onclick="addImage()"
   >
     <div class="center question">
       <p>Veux-tu être mon parrain ?</p>
