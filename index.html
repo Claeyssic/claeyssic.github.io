@@ -6,10 +6,10 @@
             console.log("addImage");
           const miloImg = document.createElement('img');
           miloImg.src = './assets/milo.png';
-          miloImg.style.width = '100px';
+          miloImg.style.width = '300px';
           miloImg.style.position = 'absolute';
-          miloImg.style.left = event.clientX - 50 + 'px';
-          miloImg.style.top = event.clientY - 50 + 'px';
+          miloImg.style.left = event.clientX - 150 + 'px';
+          miloImg.style.top = event.clientY - 150 + 'px';
           miloImg.style.animation = 'tiltHead 2.5s ease infinite';
           miloImg.style.zIndex = '0';
           console.log(event.clientX + ', ' + event.clientY);
@@ -41,12 +41,12 @@
     }
     .question {
       /* background-color: pink; */
-      width: 50%;
-      margin-top: 20%;
-      margin-left: 30%;
+      width: 60%;
+      margin-top: 35%;
+      margin-left: 22%;
       z-index: 100;
       color: white;
-      font-size: 5em;
+      font-size: 10em;
       font-family: 'Gill Sans', sans-serif;
       position: absolute;
       text-align: center;
