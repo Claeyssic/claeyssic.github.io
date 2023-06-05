@@ -19,9 +19,7 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
     id="mainDiv"
-    on:click={(e) => {
-      addImage(e);
-    }}
+    on:click="addImage(e)"
   >
     <div class="center question">
       <p>Veux-tu être mon parrain ?</p>
